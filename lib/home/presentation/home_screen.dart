@@ -13,12 +13,12 @@ class HomeScreen extends StatelessWidget {
           child: BlocConsumer<InternetBloc, InternetState>(
             listener: (context, state) {
               if (state is InternetGainedState) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text("Internet Connected"),
                   backgroundColor: Colors.green,
                 ));
               } else if (state is InternetLostState) {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text("Not Connected"),
                   backgroundColor: Colors.red,
                 ));
